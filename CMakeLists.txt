@@ -22,6 +22,11 @@ install(PROGRAMS
     ${EXAMPLES_DIR}/ex_orientation_path_constraint.py
     ${EXAMPLES_DIR}/ex_pose_goal.py
     ${EXAMPLES_DIR}/ex_servo.py
+    ${EXAMPLES_DIR}/crane_plus_fk.py
+    ${EXAMPLES_DIR}/crane_plus_joint_goal.py
+    ${EXAMPLES_DIR}/crane_plus_gripper.py
+    ${EXAMPLES_DIR}/crane_plus_ik.py
+    ${EXAMPLES_DIR}/crane_plus_pose_goal.py
     DESTINATION lib/${PROJECT_NAME}
 )
 
