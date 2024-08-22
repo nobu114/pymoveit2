@@ -23,8 +23,8 @@ def main():
     node = Node("ex_pose_goal")
 
     # Declare parameters for position and orientation
-    node.declare_parameter("position", [1.0, 0.5, 0.7])
-    node.declare_parameter("quat_xyzw", [0.707, 0.0, 0.707, 0.0])
+    node.declare_parameter("position", [0.5, 0.0, 0.25])
+    node.declare_parameter("quat_xyzw", [1.0, 0.0, 0.0, 0.0])
     node.declare_parameter("synchronous", True)
     # If non-positive, don't cancel. Only used if synchronous is False
     node.declare_parameter("cancel_after_secs", 0.0)
@@ -33,8 +33,8 @@ def main():
     # Declare parameters for cartesian planning
     node.declare_parameter("cartesian", False)
     node.declare_parameter("cartesian_max_step", 0.0025)
-    node.declare_parameter("cartesian_fraction_threshold", 0.0)
-    node.declare_parameter("cartesian_jump_threshold", 0.0)
+    node.declare_parameter("cartesian_fraction_threshold", 0.5)
+    node.declare_parameter("cartesian_jump_threshold", 0.5)
     node.declare_parameter("cartesian_avoid_collisions", False)
 
     # Create callback group that allows execution of callbacks in parallel without restrictions
@@ -105,6 +105,8 @@ def main():
         cartesian=cartesian,
         cartesian_max_step=cartesian_max_step,
         cartesian_fraction_threshold=cartesian_fraction_threshold,
+        tolerance_orientation=0.5,
+        tolerance_position=0.5
     )
     if synchronous:
         # Note: the same functionality can be achieved by setting
