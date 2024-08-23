@@ -26,6 +26,7 @@ install(PROGRAMS
     ${EXAMPLES_DIR}/hsrb_ik.py
     ${EXAMPLES_DIR}/hsrb_joint_goal.py
     ${EXAMPLES_DIR}/hsrb_pose_goal.py
+    ${EXAMPLES_DIR}/hsrb_arm_pose_goal.py
     DESTINATION lib/${PROJECT_NAME}
 )
 
