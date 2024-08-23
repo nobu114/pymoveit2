@@ -20,12 +20,9 @@ def arm_joint_names(prefix: str = "") -> List[str]:
 
 def whole_body_joint_names(prefix: str = "") -> List[str]:
     return [
-        prefix + "base_roll_joint",
-        prefix + "base_l_drive_wheel_joint",
-        prefix + "base_r_drive_wheel_joint",
-        # "odom_x",
-        # "odom_y",
-        # "odom_t",
+        prefix + "odom_x",
+        prefix + "odom_y",
+        prefix + "odom_t",
         prefix + "arm_lift_joint",
         prefix + "arm_flex_joint",
         prefix + "arm_roll_joint",
